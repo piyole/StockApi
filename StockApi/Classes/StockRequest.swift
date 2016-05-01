@@ -83,13 +83,13 @@ class StockRequest : HTTPRequest {
         return requestObject(.Get, path: StockRequest.GetStock, params: ["download" : "csv"], encoding: .URL, parser: StockParser())
     }
 
-    func requestChartData(stockKey: StockKey, barType: BarType = .Min5) -> Promise<ChartData> {
+    func requestChartData(stockKey: StockKey, barType: BarType = .Min5) -> Promise<StockChartData> {
         var path = StockRequest.GetBarData
         path = path.param("stock", format: "%@-%@", stockKey.stockCode.code, stockKey.marketCode.code)
         path = path.param("barType", barType.stringValue)
         return requestObject(.Get, path: path, params: ["download" : "csv"], encoding: .URL, parser: BarDataParser())
         .then { barData in
-            return ChartData(stockKey: stockKey, barType: barType, barData: barData)
+            return StockChartData(stockKey: stockKey, barType: barType, barData: barData)
         }
     }
 

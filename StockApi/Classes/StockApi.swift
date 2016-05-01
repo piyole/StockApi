@@ -22,7 +22,7 @@ public class StockApi : Api {
         return request(NameSpace.Stock, key: stockCacheKey, StockRequest().requestStocks())
     }
 
-    public func requestChartData(stockKey: StockKey) -> Promise<ChartData> {
+    public func requestChartData(stockKey: StockKey) -> Promise<StockChartData> {
         return request(NameSpace.BarData, key: stockKey, StockRequest().requestChartData(stockKey))
     }
 

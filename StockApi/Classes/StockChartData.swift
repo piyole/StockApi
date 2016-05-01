@@ -1,5 +1,5 @@
 //
-//  ChartData.swift
+//  StockChartData.swift
 //  StockApi
 //
 //  Created by wegie on 2016/05/01.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct ChartData {
+public struct StockChartData {
 
     public let stockKey: StockKey
     public let barType: BarType
