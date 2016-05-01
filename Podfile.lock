@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (3.3.1)
+  - AlamofireJsonData (0.0.1):
+    - Alamofire (~> 3.3.1)
+    - JsonData/Objectable (~> 0.0.1)
+  - CachedApi (0.0.2):
+    - CachedApi/Core (= 0.0.2)
+    - CachedApi/HTTPRequesting (= 0.0.2)
+    - Promise (~> 0.0.2)
+  - CachedApi/Core (0.0.2):
+    - Promise (~> 0.0.2)
+  - CachedApi/HTTPRequesting (0.0.2):
+    - AlamofireJsonData (~> 0.0.1)
+    - CachedApi/Core
+    - Promise (~> 0.0.2)
+  - JsonData/Core (0.0.1)
+  - JsonData/Objectable (0.0.1):
+    - JsonData/Core
+  - Promise (0.0.2)
+
+DEPENDENCIES:
+  - CachedApi (~> 0.0.2)
+
+SPEC CHECKSUMS:
+  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  AlamofireJsonData: 6d67f09334e478cda0f9c8e1e319b4437dbe1be3
+  CachedApi: 0d26ca3eef73ff97ed31d560aa0992513d51047d
+  JsonData: 792951db613bbed34b6106be34ef2cf9210a2984
+  Promise: e69a550153ba2b6b2674e29122d68b6035199f76
+
+COCOAPODS: 0.39.0
